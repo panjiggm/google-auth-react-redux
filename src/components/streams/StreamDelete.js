@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Modal from '../Modal'
 
 const StreamDelete = () => {
-  return ( 
-    <div>Stream Delete</div>
-   )
+  const actions = (
+    <Fragment>
+      <button className="ui negative button">Delete</button>
+      <button className="ui button">Cancel</button>
+    </Fragment>
+  )
+  return (
+    <div>
+      Stream Delete
+      <Modal
+        title="Delete Stream"
+        content="Are you sure you want to delelte this stream ?"
+        actions={actions}
+      />
+    </div>
+  )
 }
- 
-export default StreamDelete;
+
+export default StreamDelete
